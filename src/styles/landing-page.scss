@@ -1,14 +1,16 @@
 .home-container {
   display: flex;
   height: 100vh;
-  background-color: black;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 
   .text {
     z-index: 3;
+  }
+
+  .intro-section {
+    background-color: var(--black);
+    position: relative;
   }
 
   .image-container {
@@ -69,32 +71,65 @@
 //   }
 // }
 
-.warning {
-  display: none;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  text-align: center;
-  opacity: 0;
-  transition: all 0.9s ease;
-  font-family: "Monteserrat", cursive;
-  color: white;
-  font-size: 2rem;
-  padding: 0 .7rem;
-  transition: all 0.9s ease;
-}
-@media (min-width: 500px) {
-  .home-container {
-    display: none;
-  }
+.name-section {
+  background: radial-gradient(
+    at right,
+    var(--light-blue) 0% 20%,
+    var(--dark-blue) 70% 100%
+  );
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
 
-  .warning.shown {
+  .section-container {
+    background-image: url(../img/jc_image_1.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: -100%;
+    background-repeat: no-repeat;
+    position: relative;
     display: flex;
-    opacity: 1;
-    z-index: 5;
-    transition: all 0.9s ease;
+    justify-content: center;
+    align-items: flex-end;
+    .intro-text {
+      margin-bottom: 1rem;
+      max-height: fit-content;
+    }
+  }
+}
+
+.about-intro-section {
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(
+    circle,
+    var(--light-blue) 0% 20%,
+    var(--dark-blue) 70% 100%
+  );
+
+  .section-container {
+    background-image: url(../img/jc_image_2.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .about-intro-text {
+      height: 22%;
+      width: 100%;
+      background-color: black;
+      color: white;
+      align-items: center;
+      padding: 2rem;
+      font-family: "Montserrat", sans-serif;
+    }
   }
 }

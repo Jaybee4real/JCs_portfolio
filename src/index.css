@@ -28,6 +28,14 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --light-blue: #295fa6;
+  --dark-blue: #163359;
+  --black: #0d0d0d;
+  --light: #f2f2f2;
+  --slightly-dark: #404040;
+}
+
 .dotted {
   font-size: 6rem;
   color: blue;
@@ -52,6 +60,18 @@ body {
   min-height: 100vh;
 }
 
+.app-container.loading {
+  overflow: hidden !important;
+}
+
+section {
+  min-height: 100vh !important;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loader {
   position: absolute;
   transform: translateZ(0);
@@ -61,7 +81,7 @@ body {
   height: 100vh;
   width: 100vw;
   animation: blink;
-  transition: all .9s ease;
+  transition: all 0.9s ease;
 }
 
 .loader.loading {
@@ -148,3 +168,34 @@ body {
   }
 }
 
+
+
+.warning {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.9s ease;
+  font-family: "Monteserrat", cursive;
+  color: white;
+  font-size: 2rem;
+  padding: 0 0.7rem;
+  transition: all 0.9s ease;
+}
+@media (min-width: 500px) {
+  .home-container {
+    display: none;
+  }
+
+  .warning.shown {
+    display: flex;
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.9s ease;
+  }
+}

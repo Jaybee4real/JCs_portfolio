@@ -5,7 +5,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
     };
   }
   componentDidMount() {
@@ -14,7 +14,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={`app-container ${this.state.loading}`}>
+      <div className={`app-container ${this.state.loading ? "loading" : ""}`}>
         <div className={`loader ${this.state.loading ? "loading" : ""}`}>
           <span></span>
         </div>
