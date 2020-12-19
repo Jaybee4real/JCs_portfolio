@@ -9,7 +9,7 @@
   }
 
   .intro-section {
-    background-color: var(--black);
+    background-color: black;
     position: relative;
   }
 
@@ -102,7 +102,6 @@
 }
 
 .about-intro-section {
-  z-index: 3;
   position: relative;
   background: radial-gradient(
     circle,
@@ -125,12 +124,107 @@
     .about-intro-text {
       height: 22%;
       width: 100%;
-      font-size: 1.1rem;
+      font-size: 1rem;
       background-color: black;
       color: white;
       align-items: center;
-      padding: 2rem;
       font-family: "Montserrat", sans-serif;
     }
   }
+}
+
+.about-section {
+  background-color: black;
+  flex-direction: column;
+
+  .fancy {
+    position: relative;
+    top: -2rem;
+  }
+}
+
+.services-section {
+  flex-direction: column;
+  background-color: black;
+
+  .text {
+    font-weight: 200 !important;
+    font-size: 0.93rem;
+  }
+
+  .list-container {
+    width: 100vw;
+    padding-left: 15vw;
+    list-style-position: outside;
+    list-style-image: none;
+    list-style-type: none;
+    margin-top: -1.2rem !important;
+
+    li {
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      font-weight: 600;
+      position: relative;
+      margin: 5px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-color: var(--light-blue);
+        left: -1rem;
+        top: 7px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.process-section {
+  background-color: black;
+  flex-direction: column;
+
+  .fancy {
+    z-index: 2;
+  }
+
+  .text-heading {
+    width: 100%;
+    color: var(--light-blue);
+  }
+}
+
+.ready-to-create-section {
+  flex-direction: column;
+  background: radial-gradient(
+    at left,
+    var(--light-blue) 0% 20%,
+    var(--dark-blue) 70% 100%
+  );
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+
+  .section-container {
+    background-image: url(../img/jc_image_3.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: 230%;
+    background-position:45% 100px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+  }
+}
+
+
+.contact-section{
+  flex-direction: column;
+  background-color: black;
 }

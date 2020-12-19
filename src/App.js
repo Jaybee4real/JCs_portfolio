@@ -13,7 +13,7 @@ export default class App extends Component {
   }
 
   render() {
-    return (
+    return ( 
       <div className={`app-container ${this.state.loading ? "loading" : ""}`}>
         <div className={`loader ${this.state.loading ? "loading" : ""}`}>
           <span></span>
@@ -21,7 +21,7 @@ export default class App extends Component {
         <LandingPage />
         <div className={`warning ${this.state.loading ? "" : "shown"}`}>
           <div className="text">
-            Sorry, This Site Is Not Optimized For This Screen Yet
+            Sorry, This Site Is Not Optimized For This Screen Yet : (less than 500px)
           </div>
         </div>
       </div>
