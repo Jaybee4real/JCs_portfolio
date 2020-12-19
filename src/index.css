@@ -74,8 +74,8 @@ body {
 }
 
 section {
-  min-height: 100vh !important;
   height: 100vh;
+  min-height: 780px !important;
   width: 100vw;
   display: flex;
   z-index: 4;
