@@ -5,11 +5,11 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
+      loading: true,
     };
   }
   componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 2000);
+    setTimeout(() => this.setState({ loading: false }), 2500);
   }
 
   render() {

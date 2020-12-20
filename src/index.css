@@ -5,6 +5,7 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 @font-face {
@@ -67,15 +68,17 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .app-container.loading {
   overflow: hidden !important;
+  background-color: black;
 }
 
 section {
+  min-height: 770px !important;
   height: 100vh;
-  min-height: 780px !important;
   width: 100vw;
   display: flex;
   z-index: 4;
@@ -99,8 +102,7 @@ section {
 .loader.loading {
   display: flex;
   opacity: 1;
-  background-color: black;
-  z-index: 5;
+  z-index: 10;
 }
 
 .loader span {
@@ -209,5 +211,13 @@ section {
     opacity: 1;
     z-index: 5;
     transition: all 0.9s ease;
+  }
+}
+
+
+@media(max-width: 320px){
+  .dotted{
+    font-size: 4.5rem !important;
+    text-align: center;
   }
 }
