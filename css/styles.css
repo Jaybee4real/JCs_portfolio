@@ -119,6 +119,7 @@ section {
           animation: blink;
   -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
+  background-color: black;
 }
 
 .loader.loading {
@@ -247,10 +248,10 @@ section {
 }
 
 @media (min-width: 500px) {
-  .home-container {
-    display: none;
+  body {
+    overflow: hidden;
   }
-  .warning.shown {
+  .warning {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -266,12 +267,6 @@ section {
     font-size: 4.5rem !important;
     text-align: center;
   }
-}
-
-.loading .home-container {
-  display: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 .home-container {
